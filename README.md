@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# Tinder App is an App/Site made with React Sit 
+Consectetur Adipiscing was build courtesy of [quis nostrud exercitation ullamco labboris.](http://charleskimani.com) - [Click here to now how it is used.](http://charleskimani.com)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Deployed at:
 
-## Available Scripts
+```
+gittedtinderapp.netlify.com
+```
 
-In the project directory, you can run:
+## Usage
 
-### `yarn start`
+### Install dependencies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+npm install
+npm i json-server
+npm i react-router-dom
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
 
-### `yarn test`
+### Run React dev server (http://localhost:3000)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm start
+```
 
-### `yarn build`
+### Run the JSON server (http://localhost:3005)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+json-server --watch db.json --port 3005
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### To build for production
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm run build
+```
 
-### `yarn eject`
+## How It Was Built
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Create React App
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npx create-react-app 
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Helpful VS Code extension
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
 
-### Code Splitting
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Helpful Chrome extension
 
-### Analyzing the Bundle Size
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
 
-### Making a Progressive Web App
+### Helpful Lessons Learnt
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+techblog.charleskimani.com
 
-### Advanced Configuration
+// Ultricies integer quis auctor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+// Morbi tristique senectus et netus et malesuada fames.
 
-### Deployment
+// Amet cursus sit amet dictum sit. Porta nibh venenatis cras sed felis eget
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+      // Velit laoreet id donec ultrices tincidunt arcu non sodales. Euismod quis viverra nibh cras. Dui accumsan sit amet nulla facilisi morbi tempus.
 
-### `yarn build` fails to minify
+// Nisi lacus sed viverra tellus in hac. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Velit dignissim sodales ut eu sem integer.
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### src folder structure
+```
+src/
+  redux/
+    actions/
+      index.js
+    reducers/
+      counter.js
+      index.js     /* allReducer or rootReducer */
+      isLogged.js  
+  App.js
+  index.js
+```
