@@ -15,7 +15,8 @@ gittedtinderapp.netlify.com
 npm install
 npm i json-server
 npm i react-router-dom
-
+npm i -D tailwindcss@latest postcss@latest autoprefixer@latest postcss-cli@latest
+npx tailwind init tailwind.js --full
 ```
 
 ### Run React dev server (http://localhost:3000)
