@@ -1,5 +1,5 @@
 # Tinder App is an App/Site made with React Sit 
-Consectetur Adipiscing was build courtesy of [quis nostrud exercitation ullamco labboris.](http://charleskimani.com) - [Click here to now how it is used.](http://charleskimani.com)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/25af5b8e-db22-492b-8709-96bc0e77fd18/deploy-status)](https://app.netlify.com/sites/gittedtinderapp/deploys)
 
 ### Deployed at:
 
