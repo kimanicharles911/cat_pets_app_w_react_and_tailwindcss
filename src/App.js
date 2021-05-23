@@ -3,14 +3,23 @@ import { useState, useEffect } from "react";
 const App = () => {
   const token = process.env.REACT_APP_MY_TOKEN;
 
-  const [images, setImages] = useState(`https://cdn2.thecatapi.com/images/MTc5OTc4Ng.jpg`);
+  const [images, setImages] = useState(``);
+  // https://cdn2.thecatapi.com/images/ct3.jpg
 
-  /* useEffect(() => {
+  const [name, setNames] = useState();
+  const [description, setDescription] = useState();
+  const [temperament, setTemperament] = useState();
+  const [affectionLevel, setAffectionLevel] = useState();
+  const [lifeSpan, setLifeSpan] = useState();
+  const [weight, setWeight] = useState();
+  const [origin, setOrigin] = useState();
+
+  useEffect(() => {
     handleFetch();
-  }, []); */
+  }, []);
 
   const handleFetch = () => {
-    fetch(`https://api.thecatapi.com/v1/images/search`, {
+    fetch(`https://api.thecatapi.com/v1/images/search?breed_id=beng`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -24,51 +33,62 @@ const App = () => {
       .then(function (data) {
         console.log(data);
         setImages(data[0].url);
+        setNames(data[0].breeds[0].name);
+        setDescription(data[0].breeds[0].description);
+        setTemperament(data[0].breeds[0].temperament );
+        setAffectionLevel(data[0].breeds[0].affection_level );
+        setLifeSpan(data[0].breeds[0].life_span );
+        setWeight(data[0].breeds[0].weight.imperial );
+        setOrigin(data[0].breeds[0].origin );
       })
-      .catch((err) => console.log(err));;
+      .catch((err) => console.log(err));
   };
 
   return (
     <div className="container mx-auto">
-      <div className="grid grid-cols-3">
+      <div className="grid justify-center mt-4">
+        {/* grid grid-cols-3 */}
         <div className="max-w-sm rounded overflow-hidden shadow-lg">
-          <img className="w-full" src={images} alt=""/>
-          <p>Hello world</p>
-          <button onClick={handleFetch}>Get Random Cat</button>
-        </div>  
-        <div className="px-6 py-4">
-        <div className="font-bold text-purple-500 text-xl mb-2">
-          Photo by image.user
+          <img className="" src={images} alt="" />
+          {/* max-w-sm max-h-80 */}
+          <div className="px-6 py-4">
+            <div className="font-bold text-purple-500 text-xl mb-2">
+              {name}
+            </div>
+            <ul>
+              <li>
+                {description}
+              </li>
+              <li>
+                <strong>Temperament: </strong>
+                {temperament}
+              </li>
+              <li>
+                <strong>Affection Level: </strong>
+                {affectionLevel}/5
+              </li>
+              <li>
+                <strong>Life Span: </strong>
+                {lifeSpan}
+              </li>
+              <li>
+                <strong>Weight: </strong>
+                {weight} Pounds
+              </li>
+              <li>
+                <strong>Origin: </strong>
+                {origin}
+              </li>
+            </ul>
+          </div>
         </div>
-        <ul>
-          <li>
-            <strong>Views: </strong>
-            image.views
-          </li>
-          <li>
-            <strong>Downloads: </strong>
-            image.downloads
-          </li>
-          <li>
-            <strong>Likes: </strong>
-            image.likes
-          </li>
-        </ul>
-      </div>      
       </div>
+      <button onClick={handleFetch}>Get Random Cat</button>
     </div>
   );
 };
 
 export default App;
-
-
-
-
-
-
-
-
 
 /* 
 useEffect(() => {
