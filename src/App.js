@@ -1,103 +1,35 @@
-import { useState, useEffect } from "react";
+import NavBarComponent from "./components/NavbarComponent.jsx";
+import ScottishComponent from "./components/ScottishComponent.jsx";
+import MonthBreedComponent from "./components/MonthBreedComponent.jsx";
+import PersianComponent from "./components/PersianComponent.jsx";
+import AmericanComponent from "./components/AmericanComponent.jsx";
+import JavaneseComponent from "./components/JavaneseComponent.jsx";
+import KhaoComponent from "./components/KhaoComponent.jsx";
+import SingapuraComponent from "./components/SingapuraComponent.jsx";
+import YorkComponent from "./components/YorkComponent.jsx";
+import RagaMuffinComponent from "./components/RagaMuffinComponent.jsx";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
-  const token = process.env.REACT_APP_MY_TOKEN;
-
-  const [images, setImages] = useState(``);
-  // https://cdn2.thecatapi.com/images/ct3.jpg
-
-  const [name, setNames] = useState();
-  const [description, setDescription] = useState();
-  const [temperament, setTemperament] = useState();
-  const [affectionLevel, setAffectionLevel] = useState();
-  const [lifeSpan, setLifeSpan] = useState();
-  const [weight, setWeight] = useState();
-  const [origin, setOrigin] = useState();
-
-  useEffect(() => {
-    handleFetch();
-  }, []);
-
-  const handleFetch = () => {
-    fetch(`https://api.thecatapi.com/v1/images/search?breed_id=beng`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": token,
-      },
-    })
-      .then(function (response) {
-        console.log(response);
-        return response.json();
-      })
-      .then(function (data) {
-        console.log(data);
-        setImages(data[0].url);
-        setNames(data[0].breeds[0].name);
-        setDescription(data[0].breeds[0].description);
-        setTemperament(data[0].breeds[0].temperament );
-        setAffectionLevel(data[0].breeds[0].affection_level );
-        setLifeSpan(data[0].breeds[0].life_span );
-        setWeight(data[0].breeds[0].weight.imperial );
-        setOrigin(data[0].breeds[0].origin );
-      })
-      .catch((err) => console.log(err));
-  };
 
   return (
     <div className="container mx-auto">
-      <div className="grid justify-center mt-4">
-        {/* grid grid-cols-3 */}
-        <div className="max-w-sm rounded overflow-hidden shadow-lg">
-          <img className="" src={images} alt="" />
-          {/* max-w-sm max-h-80 */}
-          <div className="px-6 py-4">
-            <div className="font-bold text-purple-500 text-xl mb-2">
-              {name}
-            </div>
-            <ul>
-              <li>
-                {description}
-              </li>
-              <li>
-                <strong>Temperament: </strong>
-                {temperament}
-              </li>
-              <li>
-                <strong>Affection Level: </strong>
-                {affectionLevel}/5
-              </li>
-              <li>
-                <strong>Life Span: </strong>
-                {lifeSpan}
-              </li>
-              <li>
-                <strong>Weight: </strong>
-                {weight} Pounds
-              </li>
-              <li>
-                <strong>Origin: </strong>
-                {origin}
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <button onClick={handleFetch}>Get Random Cat</button>
+      <Router>
+        <NavBarComponent />
+        <Switch>
+          <Route path="/" exact component={MonthBreedComponent} />
+          <Route path="/scottish" exact component={ScottishComponent} />
+          <Route path="/persian" exact component={PersianComponent} />
+          <Route path="/american" exact component={AmericanComponent} />
+          <Route path="/javanese" exact component={JavaneseComponent} />
+          <Route path="/khao" exact component={KhaoComponent} />
+          <Route path="/singapura" exact component={SingapuraComponent} />
+          <Route path="/york" exact component={YorkComponent} />
+          <Route path="/ragamuffin" exact component={RagaMuffinComponent} />       
+        </Switch>
+      </Router>
     </div>
   );
 };
 
 export default App;
-
-/* 
-useEffect(() => {
-    fetch(`https://api.thecatapi.com/v1/images/search?breed_id=beng`)
-      .then((res) => res.json())
-      .then((data) => {
-        setImages(data[0].url);
-        console.log(data[0].url)
-      })
-      .catch((err) => console.log(err));
-  });
-*/

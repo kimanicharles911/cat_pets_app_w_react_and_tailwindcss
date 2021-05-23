@@ -17,6 +17,7 @@ npm i json-server
 npm i react-router-dom
 npm i -D tailwindcss@latest postcss@latest autoprefixer@latest postcss-cli@latest
 npx tailwind init tailwind.js --full
+npm i @headlessui/react
 ```
 
 ### Run React dev server (http://localhost:3000)
@@ -43,6 +44,8 @@ npm run build
 
 ```
 npx create-react-app 
+https://tailwindui.com/preview#component-10058606cac5398d7fa2c73b64089874
+https://dev.to/prnvbirajdar/the-easiest-way-to-build-a-responsive-navbar-using-tailwind-react-2803
 ```
 
 ```
