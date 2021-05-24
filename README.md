@@ -19,7 +19,16 @@ src/
     main.css
     tailwind.css
   components/
-    ...
+    AmericanComponent.jsx
+    JavaneseComponent.jsx
+    KhaoComponent.jsx
+    MonthBreedComponent.jsx
+    NavbarComponent.jsx
+    PersianComponent.jsx
+    RagaMuffinComponent.jsx
+    ScottishComponent.jsx
+    SingapuraComponent.jsx
+    YorkComponent.jsx
   App.css
   App.js
   index.css
