@@ -1,4 +1,4 @@
-# Tinder App is an App/Site made with React Sit 
+# Tinder App is an App/Site made with React and TailwindCSS 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/25af5b8e-db22-492b-8709-96bc0e77fd18/deploy-status)](https://app.netlify.com/sites/gittedtinderapp/deploys)
 
 ### Deployed at:
@@ -30,6 +30,16 @@ npm start
 
 ```
 json-server --watch db.json --port 3005
+```
+
+### To setup routing for netlify deployment
+```
+Create a file in the root directory called _redirects
+Copy this inside the_redirects file:
+  # Redirect with a 301
+  /*  /index.html   200
+Add this line to the build script line in package.json
+  && cp _redirects build/_redirects
 ```
 
 ### To build for production
