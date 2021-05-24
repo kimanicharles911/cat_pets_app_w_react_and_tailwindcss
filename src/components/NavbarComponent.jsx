@@ -143,6 +143,7 @@ const NavBarComponent = () => {
                   <a
                     href="#"
                     className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
+                    onClick={() => setIsOpen(!isOpen)}
                   >
                     Breed of the Month
                   </a>
@@ -150,42 +151,49 @@ const NavBarComponent = () => {
                 <Link
                   to="/scottish"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  onClick={() => setIsOpen(!isOpen)}
                 >
                   Scottish Fold
                 </Link>
                 <Link
                   to="/persian"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  onClick={() => setIsOpen(!isOpen)}
                 >
                   Persian
                 </Link>
                 <Link
                   to="/american"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  onClick={() => setIsOpen(!isOpen)}
                 >
                   American Bobtail
                 </Link>
                 <Link
                   to="/javanese"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  onClick={() => setIsOpen(!isOpen)}
                 >
                   Javanese
                 </Link>
                 <Link
                   to="/khao"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  onClick={() => setIsOpen(!isOpen)}
                 >
                   Khao Manee
                 </Link>
                 <Link
                   to="/singapura"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  onClick={() => setIsOpen(!isOpen)}
                 >
                   Singapura
                 </Link>
                 <Link
                   to="/york"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  onClick={() => setIsOpen(!isOpen)}
                 >
                   York Chocolate
                 </Link>
