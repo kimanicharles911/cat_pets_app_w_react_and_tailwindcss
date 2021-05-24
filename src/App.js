@@ -8,6 +8,8 @@ import KhaoComponent from "./components/KhaoComponent.jsx";
 import SingapuraComponent from "./components/SingapuraComponent.jsx";
 import YorkComponent from "./components/YorkComponent.jsx";
 import RagaMuffinComponent from "./components/RagaMuffinComponent.jsx";
+import AuthFailureComponent from "./components/AuthFailureComponent.jsx";
+import AuthSuccessComponent from "./components/AuthSuccessComponent.jsx";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
@@ -25,7 +27,9 @@ const App = () => {
           <Route path="/khao" exact component={KhaoComponent} />
           <Route path="/singapura" exact component={SingapuraComponent} />
           <Route path="/york" exact component={YorkComponent} />
-          <Route path="/ragamuffin" exact component={RagaMuffinComponent} />       
+          <Route path="/ragamuffin" exact component={RagaMuffinComponent} /> 
+          <Route path="/authfailure" exact component={AuthFailureComponent} /> 
+          <Route path="/authsuccess" exact component={AuthSuccessComponent} />       
         </Switch>
       </Router>
     </div>

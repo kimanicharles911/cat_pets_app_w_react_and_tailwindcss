@@ -72,10 +72,16 @@ const NavBarComponent = () => {
                     Singapura
                   </Link>
                   <Link
-                    to="/york"
+                    to="/authfailure"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    York Chocolate
+                    Auth Failure
+                  </Link>
+                  <Link
+                    to="/authsuccess"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    Auth Success
                   </Link>
                 </div>
               </div>
@@ -191,11 +197,18 @@ const NavBarComponent = () => {
                   Singapura
                 </Link>
                 <Link
-                  to="/york"
+                  to="/authfailure"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   onClick={() => setIsOpen(!isOpen)}
                 >
-                  York Chocolate
+                  Auth Failure
+                </Link>
+                <Link
+                  to="/authsuccess"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  onClick={() => setIsOpen(!isOpen)}
+                >
+                  Auth Success
                 </Link>
               </div>
             </div>
