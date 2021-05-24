@@ -18,6 +18,7 @@ npm i react-router-dom
 npm i -D tailwindcss@latest postcss@latest autoprefixer@latest postcss-cli@latest
 npx tailwind init tailwind.js --full
 npm i @headlessui/react
+npm i react-icons
 ```
 
 ### Run React dev server (http://localhost:3000)
