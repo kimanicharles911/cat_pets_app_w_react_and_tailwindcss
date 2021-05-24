@@ -3,7 +3,7 @@
 <p align="">
   <img src="./public/images/american-bobtail-screenshot.jpg" width="190" height="370" alt="Tinder App">
   <img src="./public/images/nav-screenshot.jpg" width="190" height="370" alt="Tinder App">
-  <img src="./public/images/bengal-screenshot.png" width="450" height="370" alt="Tinder App">
+  <img src="./public/images/bengal-screenshot.png" width="350" height="370" alt="Tinder App">
 </p>
 
 ### Deployed at:
