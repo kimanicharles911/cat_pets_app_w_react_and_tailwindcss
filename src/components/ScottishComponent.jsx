@@ -36,8 +36,6 @@ const ScottishComponent = () => {
     setDislikeClick(!dislikeClick);
     setLikeClick(false);
   };
-  const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
 
   useEffect(() => {
     handleFetch();
@@ -158,7 +156,7 @@ const ScottishComponent = () => {
 
 export default ScottishComponent;
 
-/* 
+/*
 useEffect(() => {
     fetch(`https://api.thecatapi.com/v1/images/search?breed_id=beng`)
       .then((res) => res.json())

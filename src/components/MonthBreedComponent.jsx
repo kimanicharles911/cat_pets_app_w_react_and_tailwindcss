@@ -38,8 +38,6 @@ const MonthBreedComponent = () => {
     setDislikeClick(!dislikeClick);
     setLikeClick(false);
   };
-  const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
 
   useEffect(() => {
     handleFetch();
@@ -160,7 +158,7 @@ const MonthBreedComponent = () => {
 
 export default MonthBreedComponent;
 
-/* 
+/*
 useEffect(() => {
     fetch(`https://api.thecatapi.com/v1/images/search?breed_id=beng`)
       .then((res) => res.json())

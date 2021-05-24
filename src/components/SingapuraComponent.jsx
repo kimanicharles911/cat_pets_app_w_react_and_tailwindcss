@@ -35,8 +35,6 @@ const SingapuraComponent = () => {
     setDislikeClick(!dislikeClick);
     setLikeClick(false);
   };
-  const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
 
   useEffect(() => {
     handleFetch();
