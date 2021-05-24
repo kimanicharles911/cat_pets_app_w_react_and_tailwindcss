@@ -1,5 +1,6 @@
-# Tinder App is an App/Site made with React and TailwindCSS 
+# Tinder App is a responsive App/Site made with React and TailwindCSS 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/25af5b8e-db22-492b-8709-96bc0e77fd18/deploy-status)](https://app.netlify.com/sites/gittedtinderapp/deploys)
+![Tinder App](./public/images/persian-screenshot.jpg)
 
 ### Deployed at:
 
