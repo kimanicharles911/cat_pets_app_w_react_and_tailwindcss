@@ -1,7 +1,7 @@
 # Tinder App is a responsive App/Site made with React and TailwindCSS 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/25af5b8e-db22-492b-8709-96bc0e77fd18/deploy-status)](https://app.netlify.com/sites/gittedtinderapp/deploys)
-<p align="flex">
-  <img src="./public/images/persian-screenshot.jpg" width="190" height="370" alt="Tinder App">
+<p align="">
+  <img src="./public/images/american-bobtail-screenshot.jpg" width="190" height="370" alt="Tinder App">
   <img src="./public/images/nav-screenshot.jpg" width="190" height="370" alt="Tinder App">
 </p>
 
